@@ -1,14 +1,11 @@
 title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
+baseurl: ""
 theme: just-the-docs
 
 url: https://just-the-docs.github.io
+repository: just-the-docs/just-the-docs # for github-metadata
 
-# defaults:
-#   - scope:
-#       path: "*.md"
-#     values:
-#       layout: page
 permalink: pretty
 
 defaults:
