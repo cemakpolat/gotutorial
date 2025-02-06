@@ -1,4 +1,4 @@
 ---
-title: Customization
-nav_order: 2
+title: UI Tests
+nav_order: 3
 ---
