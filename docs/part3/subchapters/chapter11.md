@@ -159,19 +159,19 @@ Task queues enable you to offload and manage background tasks, ensuring that tim
         var wg sync.WaitGroup
 	
         for i := 0; i < numWorkers; i++ {
-		wg.Add(1);
+			wg.Add(1);
             go worker(i, &wg)
         }
-	
-	for i := 0; i < numTasks; i++ {
-		jobs <- Task {
-			ID: i + 1,
-			Priority: rand.Intn(10),
-			Data: fmt.Sprintf("data %d", i),
+		
+		for i := 0; i < numTasks; i++ {
+			jobs <- Task {
+				ID: i + 1,
+				Priority: rand.Intn(10),
+				Data: fmt.Sprintf("data %d", i),
+			}
 		}
-	}
 
-	close(jobs) // signal to the workers that there are no more jobs coming
+		close(jobs) // signal to the workers that there are no more jobs coming
         wg.Wait()
 		fmt.Println("All workers have finished")
     }

@@ -126,39 +126,39 @@ This example will demonstrate how to create a basic to-do list manager, allowing
 		reader := bufio.NewReader(os.Stdin)
 	
 		for {
-		fmt.Print("Enter command (add/list/complete/exit): ");
-		input, _ := reader.ReadString('\n')
-		input = strings.TrimSpace(input)
-	
-		parts := strings.SplitN(input, " ", 2);
-		command := parts[0];
+			fmt.Print("Enter command (add/list/complete/exit): ");
+			input, _ := reader.ReadString('\n')
+			input = strings.TrimSpace(input)
+		
+			parts := strings.SplitN(input, " ", 2);
+			command := parts[0];
 
-		switch command {
-		case "add":
-			if len(parts) < 2 {
-				fmt.Println("Description required!");
-				continue;
-			}
-			addTask(&tasks, parts[1])
-		case "list":
-			listTasks(tasks)
-		case "complete":
-			if len(parts) < 2 {
-				fmt.Println("Task ID required!");
-				continue;
-			}
-			id, err := strconv.Atoi(parts[1])
-			if err != nil {
-				fmt.Println("Invalid task id!");
-				continue;
-			}
-			completeTask(&tasks, id)
-		case "exit":
-			fmt.Println("Exiting the application");
-			return
-		default:
-			fmt.Println("Invalid command. Please enter add/list/complete or exit");
-			}
+			switch command {
+			case "add":
+				if len(parts) < 2 {
+					fmt.Println("Description required!");
+					continue;
+				}
+				addTask(&tasks, parts[1])
+			case "list":
+				listTasks(tasks)
+			case "complete":
+				if len(parts) < 2 {
+					fmt.Println("Task ID required!");
+					continue;
+				}
+				id, err := strconv.Atoi(parts[1])
+				if err != nil {
+					fmt.Println("Invalid task id!");
+					continue;
+				}
+				completeTask(&tasks, id)
+			case "exit":
+				fmt.Println("Exiting the application");
+				return
+			default:
+				fmt.Println("Invalid command. Please enter add/list/complete or exit");
+				}
 		}
 	}
     ```
@@ -220,9 +220,9 @@ This example will demonstrate how to create a CLI tool that counts the frequency
             wordCounts[word]++
         }
 
-	if err = scanner.Err(); err != nil {
-		return nil, err;
-	}
+		if err = scanner.Err(); err != nil {
+			return nil, err;
+		}
         return wordCounts, nil
     }
 
@@ -243,14 +243,14 @@ This example will demonstrate how to create a CLI tool that counts the frequency
 		
 		fmt.Println("Top words:");
         for i := 0; i < topN && i < len(ss); i++ {
-		fmt.Printf("%s: %d\n", ss[i].key, ss[i].value);
+			fmt.Printf("%s: %d\n", ss[i].key, ss[i].value);
         }
     }
 
     func main() {
         if len(os.Args) != 3 {
-		fmt.Println("Usage: go run main.go <filename> <topN>")
-		os.Exit(1);
+			fmt.Println("Usage: go run main.go <filename> <topN>")
+			os.Exit(1);
         }
         filename := os.Args[1];
 		topN, err := strconv.Atoi(os.Args[2])
@@ -307,41 +307,41 @@ This example will demonstrate how to create a CLI tool that downloads a file fro
     )
 
     func downloadFile(url string, filepath string) error {
-	resp, err := http.Get(url)
-	if err != nil {
-		return err
+		resp, err := http.Get(url)
+		if err != nil {
+			return err
+		}
+		defer resp.Body.Close()
+		
+		if resp.StatusCode != http.StatusOK {
+			return fmt.Errorf("invalid response code %d", resp.StatusCode)
+		}
+
+		file, err := os.Create(filepath)
+		if err != nil {
+			return err
+		}
+		defer file.Close()
+
+		_, err = io.Copy(file, resp.Body);
+		return err;
 	}
-	defer resp.Body.Close()
-	
-	if resp.StatusCode != http.StatusOK {
-		return fmt.Errorf("invalid response code %d", resp.StatusCode)
-	}
 
-	file, err := os.Create(filepath)
-	if err != nil {
-		return err
-	}
-	defer file.Close()
-
-	_, err = io.Copy(file, resp.Body);
-	return err;
-    }
-
-    func main() {
-        if len(os.Args) != 3 {
-	    fmt.Println("Usage: go run main.go <url> <filepath>");
-	    os.Exit(1)
-        }
-
-	url := os.Args[1];
-	filepath := os.Args[2];
-	
-	err := downloadFile(url, filepath)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error downloading file: %v\n", err);
+	func main() {
+		if len(os.Args) != 3 {
+		fmt.Println("Usage: go run main.go <url> <filepath>");
 		os.Exit(1)
-	}
-	fmt.Println("File downloaded successfully!");
+		}
+
+		url := os.Args[1];
+		filepath := os.Args[2];
+		
+		err := downloadFile(url, filepath)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error downloading file: %v\n", err);
+			os.Exit(1)
+		}
+		fmt.Println("File downloaded successfully!");
     }
     ```
     *   `downloadFile` downloads the file from a URL and saves it to a specified path.

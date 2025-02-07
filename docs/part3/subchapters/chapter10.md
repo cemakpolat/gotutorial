@@ -45,28 +45,27 @@ This example will demonstrate how to create a basic web server that handles diff
 	
 	func postsHandler(w http.ResponseWriter, r *http.Request) {
 	    fmt.Println("Query parameters:", r.URL.Query());
-
 		switch r.Method {
-		case http.MethodGet:
-			fmt.Fprintf(w, "This is a list of posts!");
-		case http.MethodPost:
-			body, err := io.ReadAll(r.Body);
-			if err != nil {
-				http.Error(w, "Error reading the body", http.StatusBadRequest);
-				return;
-			}
-			var post Post;
+			case http.MethodGet:
+				fmt.Fprintf(w, "This is a list of posts!");
+			case http.MethodPost:
+				body, err := io.ReadAll(r.Body);
+				if err != nil {
+					http.Error(w, "Error reading the body", http.StatusBadRequest);
+					return;
+				}
+				var post Post;
 
-			err = json.Unmarshal(body, &post);
+				err = json.Unmarshal(body, &post);
 
-			if err != nil {
-				http.Error(w, "Error unmarshalling json", http.StatusBadRequest);
-				return;
-			}
-			fmt.Fprintf(w, "Post created:\n");
-			fmt.Fprintf(w, "Message: %s\nAuthor: %s\n", post.Message, post.Author);
-		default:
-		    http.Error(w, "Method not allowed", http.StatusMethodNotAllowed);
+				if err != nil {
+					http.Error(w, "Error unmarshalling json", http.StatusBadRequest);
+					return;
+				}
+				fmt.Fprintf(w, "Post created:\n");
+				fmt.Fprintf(w, "Message: %s\nAuthor: %s\n", post.Message, post.Author);
+			default:
+				http.Error(w, "Method not allowed", http.StatusMethodNotAllowed);
 		}
 	}
 	
@@ -253,16 +252,16 @@ This example will demonstrate how to create a simple TCP server that allows clie
 	func manageConnections() {
 		for {
 			select {
-			case client := <- clientChannel:
-				clients[client.conn] = client
-				fmt.Println("New client connected: ", client.conn.RemoteAddr());
-				
-			case message := <- messageChannel:
-				broadcastMessage(message, clients[0].conn);
-			case conn := <- quitChannel:
-				fmt.Println("Client disconnected: ", conn.RemoteAddr());
-				delete(clients, conn);
-				conn.Close();
+				case client := <- clientChannel:
+					clients[client.conn] = client
+					fmt.Println("New client connected: ", client.conn.RemoteAddr());
+					
+				case message := <- messageChannel:
+					broadcastMessage(message, clients[0].conn);
+				case conn := <- quitChannel:
+					fmt.Println("Client disconnected: ", conn.RemoteAddr());
+					delete(clients, conn);
+					conn.Close();
 			}
 		}
 	}
