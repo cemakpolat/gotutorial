@@ -1,7 +1,6 @@
 ---
-title: The Go Revolution
+title: Functions
 parent: Foundation of Go
 nav_order: 1
 ---
-# Foundataion of Go
-
+# Test 3
