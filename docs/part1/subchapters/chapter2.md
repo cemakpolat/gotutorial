@@ -3,6 +3,7 @@ title: Chapter 2 - Data Structures in Go
 parent: Foundation of Go
 nav_order: 3
 ---
+## Chapter 2 - Data Structures in Go
 
 This chapter explores fundamental data structures provided by Go, which allow you to organize and manipulate data effectively. Understanding these structures is crucial for building robust and efficient applications.
 

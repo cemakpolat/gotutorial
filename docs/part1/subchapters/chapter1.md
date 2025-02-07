@@ -3,7 +3,7 @@ title: Chapter 1 - Go's Core Concepts
 parent: Foundation of Go
 nav_order: 2
 ---
-# Chapter 1: Go's Core Concepts
+## Chapter 1: Go's Core Concepts
 
 This chapter introduces the fundamental building blocks of Go programming language. Mastering these concepts is essential for writing efficient Go programs. We will explore variables, data types, operators, control flow, functions, and pointers. Even though understanding these concepts is easy, it is crucial to master these basics.
 

@@ -3,8 +3,6 @@ title: Introduction - The Go Revolution
 parent: Foundation of Go
 nav_order: 1
 ---
-# Foundataion of Go
-
 ## Introduction: The Go Revolution
 
 This book serves as a comprehensive guide for both experienced developers and newcomers seeking to master the intricacies of Go. We will embark on a systematic exploration of the language, its core principles, and its practical applications.
