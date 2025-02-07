@@ -1,5 +1,5 @@
 ---
-title: Go's Core Concepts
+title: Chapter 1 - Go's Core Concepts
 parent: Foundation of Go
 nav_order: 2
 ---
