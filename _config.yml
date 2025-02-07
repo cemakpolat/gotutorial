@@ -1,5 +1,5 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Go Tutorial
+description: This project aims at teaching Go Language step by step!
 baseurl: ""
 theme: just-the-docs
 
@@ -20,7 +20,7 @@ exclude:
   - Makefile
   - sample.png
   - README.md
-
+  - justtjedoc.md
 
 
 # Set a path/url to a logo that will be displayed instead of the title
