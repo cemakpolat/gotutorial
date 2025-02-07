@@ -68,6 +68,6 @@ mermaid:
 heading_anchors: true
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/cemakpolat/gotutorials
 
 nav_enabled: true
