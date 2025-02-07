@@ -1,5 +1,5 @@
 ---
-title: Introduction: The Go Revolution
+title: The Go Revolution
 parent: Foundation of Go
 nav_order: 1
 ---
