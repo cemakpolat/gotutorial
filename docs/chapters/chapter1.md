@@ -1,5 +1,5 @@
 ---
 title: Main Navigation
-parent: Navigation
+parent: chapters
 nav_order: 1
 ---
