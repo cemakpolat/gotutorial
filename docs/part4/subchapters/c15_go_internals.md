@@ -4,11 +4,11 @@ parent: Advanced Topics
 nav_order: 2
 ---
 
-## Chapter 14: Go Internals
+## Chapter 15: Go Internals
 
 Understanding the inner mechanisms of Go can give you deeper insights into how the language operates, allowing you to write more efficient and effective code. This chapter will explore two core aspects of Go's internals: garbage collection and the Go scheduler.
 
-**14.1 Garbage Collection**
+**15.1 Garbage Collection**
 
 Garbage collection (GC) is an automatic memory management process that reclaims memory occupied by objects that are no longer in use by the program. Go's garbage collector is designed to be efficient and to minimize the burden on developers.
 
@@ -39,7 +39,7 @@ Garbage collection (GC) is an automatic memory management process that reclaims 
     * Avoid using finalizers as they will not be called immediately when the object is no longer in use, leading to memory leaks.
 	*  `runtime.GC()` You can use this function to force a garbage collection, but it should be avoided whenever possible.
 
-**14.2 The Go Scheduler**
+**15.2 The Go Scheduler**
 
 The Go scheduler is a key component that manages the execution of goroutines, Go's lightweight concurrency mechanism. It's responsible for efficiently multiplexing goroutines onto a limited number of operating system threads.
 
@@ -71,7 +71,7 @@ The Go scheduler is a key component that manages the execution of goroutines, Go
     *   Avoid long-running tasks on a single goroutine that can block other goroutines from running, and use channels to communicate between goroutines.
     *    Use tools such as `pprof` to identify bottlenecks in your code.
 
-**14.3 Key Takeaways**
+**15.3 Key Takeaways**
 
 This chapter has explored two important Go internals:
 

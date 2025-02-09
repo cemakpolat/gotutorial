@@ -4,11 +4,11 @@ parent: Advanced Topics
 nav_order: 2
 ---
 
-## Chapter 13: Reflection
+## Chapter 14: Reflection
 
 Reflection is a powerful feature that allows a program to inspect and manipulate its own structure at runtime. In Go, reflection is provided through the `reflect` package. While it's a powerful tool, it should be used carefully because it can lead to less readable and maintainable code, and has a performance cost. This chapter will explain the concepts of reflection in Go and showcase some use cases.
 
-**13.1 Understanding Reflection in Go**
+**14.1 Understanding Reflection in Go**
 
 Reflection is the ability of a program to examine its own structure and behavior at runtime. It allows programs to:
 
@@ -183,7 +183,7 @@ Go's reflection is primarily provided by the `reflect` package. The central type
 	* The method `Call` receives a slice with the arguments of the function.
 	*   The example above shows how to call a function using reflection.
 
-**13.2 Use Cases for Reflection**
+**14.2 Use Cases for Reflection**
 
 While reflection should be used carefully and is generally not needed for most common cases, it can be useful in specific scenarios:
 
@@ -199,7 +199,7 @@ While reflection should be used carefully and is generally not needed for most c
 *   **Reduced Type Safety:** Reflection can bypass type checking, which can lead to runtime errors and harder-to-debug code.
 *   **Maintainability:** Reflection can make code harder to read and understand, potentially reducing the maintainability of your codebases.
 
-**13.3 Key Takeaways**
+**14.3 Key Takeaways**
 
 This chapter has provided an introduction to reflection in Go:
 

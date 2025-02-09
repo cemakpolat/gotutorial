@@ -1,15 +1,15 @@
 ---
 title: Error Handling
 parent: Advanced Go Development
-nav_order: 2
+nav_order: 3
 ---
 
 
-## Chapter 4: Error Handling
+## Chapter 5: Error Handling
 
 In Go, error handling is an essential part of writing robust and reliable code. Go encourages explicit error handling, which means you must check for errors after operations that can fail. This chapter explains the mechanisms and best practices for handling errors gracefully.
 
-**4.1 The `error` Type**
+**5.1 The `error` Type**
 
 The `error` type in Go is an interface that represents an error condition. It has a single method:
 
@@ -73,7 +73,7 @@ Any type that implements the `Error() string` method can be used as an `error`. 
     ```
     In this example, the `divide` function returns an error when the divisor is zero. The caller of the `divide` function is then responsible for handling that error.
 
-**4.2 Error Handling Best Practices**
+**5.2 Error Handling Best Practices**
 
 Go promotes a straightforward approach to error handling: check errors where they occur and handle them appropriately.
 
@@ -223,7 +223,7 @@ Go promotes a straightforward approach to error handling: check errors where the
     ```
     In this example, there is a decision to catch the error when fetching a url, log it and gracefully continue (or potentially return to allow the caller to handle it better), instead of simply crashing the application.
 
-**4.3 Panics and Recovering**
+**5.3 Panics and Recovering**
 
 Panics and Recover are features to handle exceptional situations which shouldn't happen in the normal execution of the program.
 
@@ -282,7 +282,7 @@ Panics and Recover are features to handle exceptional situations which shouldn't
 
 **Important:** Avoid using `panic` and `recover` for normal error handling. They are intended for very exceptional cases. Use them sparingly and only when necessary.
 
-**4.4 Key Takeaways**
+**5.4 Key Takeaways**
 
 This chapter has covered the fundamental aspects of error handling in Go:
 

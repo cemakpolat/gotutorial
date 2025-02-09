@@ -4,11 +4,11 @@ parent: Real-World Applications
 nav_order: 2
 ---
 
-## Chapter 11: Other Applications
+## Chapter 12: Other Applications
 
 Go's performance, concurrency, and system-level capabilities make it suitable for a wide variety of applications. This chapter will explore three areas where Go shines: log analysis, task queues, and system monitoring.
 
-**11.1 Log Analysis**
+**12.1 Log Analysis**
 
 Log analysis tools are essential for understanding application behavior, debugging issues, and identifying trends. Go's performance and concurrency make it well-suited for processing large log files efficiently.
 
@@ -115,7 +115,7 @@ Log analysis tools are essential for understanding application behavior, debuggi
 		```
         Replace `app.log` with the path to your log file, and optionally use the second argument for a filter.
 
-**11.2 Task Queues**
+**12.2 Task Queues**
 
 Task queues enable you to offload and manage background tasks, ensuring that time-consuming operations don't block the main program flow. Go's concurrency features make it well-suited for building efficient task queue systems.
 
@@ -191,7 +191,7 @@ Task queues enable you to offload and manage background tasks, ensuring that tim
         go run .
         ```
 
-**11.3 System Monitoring**
+**12.3 System Monitoring**
 
 System monitoring tools collect and report data about system resources, performance, and health. Go's ability to access system information and its concurrency capabilities make it useful for building monitoring agents.
 
@@ -269,7 +269,7 @@ System monitoring tools collect and report data about system resources, performa
 
     3.  Open a web browser and visit `http://localhost:8080/metrics` to see the collected metrics as json.
 
-**11.4 Key Takeaways**
+**12.4 Key Takeaways**
 
 This chapter has explored other application areas where Go can be used:
 

@@ -1,14 +1,14 @@
 ---
 title: Functions as First Class Citizens
 parent: Advanced Go Development
-nav_order: 1
+nav_order: 2
 ---
 
-## Chapter 3: Functions as First-Class Citizens
+## Chapter 4: Functions as First-Class Citizens
 
 In Go, functions are considered first-class citizens. This means that functions can be treated like any other value: they can be assigned to variables, passed as arguments to other functions, and returned as values from other functions. This flexibility opens up a wide range of possibilities for writing powerful and expressive code.
 
-**3.1 Functions as Types**
+**4.1 Functions as Types**
 
 A function’s signature (its parameters and return types) defines its type. Just like you can have variables of type `int` or `string`, you can also have variables of type `func() int` or `func(string) bool`.
 
@@ -68,7 +68,7 @@ A function’s signature (its parameters and return types) defines its type. Jus
 	
     In this example, a type alias `mathOperation` has been created to store the type `func(int,int) int`, making it a bit clearer to read.
 
-**3.2 Higher-Order Functions**
+**4.2 Higher-Order Functions**
 
 Higher-order functions are functions that take other functions as arguments or return functions as their results. This is a powerful feature that enables code reuse and the implementation of complex programming patterns.
 
@@ -121,7 +121,7 @@ Higher-order functions are functions that take other functions as arguments or r
 
     Here, `createMultiplier` returns a function that multiplies a given number by the specified `multiplier`.
 
-**3.3 Closures**
+**4.3 Closures**
 
 A closure is a function that captures variables from its surrounding scope. It remembers the values of these variables even after the outer function has returned.
 
@@ -153,7 +153,7 @@ A closure is a function that captures variables from its surrounding scope. It r
     In this example, the inner anonymous function has access to the variable `count` of its outer `counter` function, even after `counter` has finished. Each time the returned function is called, it increments and returns the value of `count`.
     Each time we call the `counter` function, we get a new instance of `count` with its own state, independent from the other `counter` calls. 
 
-**3.4 Key Takeaways**
+**4.4 Key Takeaways**
 
 This chapter has highlighted the versatility and power of functions as first-class citizens in Go:
 

@@ -1,14 +1,14 @@
 ---
 title: Concurrency in Go
 parent: Advanced Go Development
-nav_order: 2
+nav_order: 6
 ---
 
-## Chapter 7: Concurrency in Go
+## Chapter 8: Concurrency in Go
 
 Concurrency is a key feature of Go, enabling you to perform multiple tasks seemingly simultaneously. Go achieves concurrency through goroutines and channels, which provide a lightweight and efficient approach to parallel programming. This chapter will guide you through the core concepts and best practices of concurrency in Go.
 
-**7.1 Goroutines**
+**8.1 Goroutines**
 
 Goroutines are lightweight, concurrent functions that run independently from the main program flow. They are the building blocks for concurrency in Go and are much more lightweight than traditional threads.
 
@@ -75,7 +75,7 @@ Goroutines are lightweight, concurrent functions that run independently from the
 *   **The `go` Keyword:**
     The `go` keyword is used to start a new goroutine, executing a function in concurrent way.
 
-**7.2 Channels**
+**8.2 Channels**
 
 Channels are typed conduits through which goroutines can communicate and synchronize. They provide a safe and efficient way for goroutines to exchange data.
 
@@ -243,7 +243,7 @@ Channels are typed conduits through which goroutines can communicate and synchro
 		*   In the above example, we have 3 workers that are consuming jobs from the `jobs` channel and putting the results in the `results` channel.
 	*   **Fan-out, Fan-in:** Distributing work to multiple goroutines and combining the results from multiple channels.
 
-**7.3 Mutexes (Synchronization)**
+**8.3 Mutexes (Synchronization)**
 
 Mutexes provide a mechanism for synchronizing access to shared resources, ensuring that only one goroutine can access the resource at a time, and preventing race conditions.
 
@@ -320,7 +320,7 @@ Mutexes provide a mechanism for synchronizing access to shared resources, ensuri
     *   `m.Lock()` locks the mutex, preventing other goroutines from accessing the shared resource.
     *   `m.Unlock()` unlocks the mutex, allowing other goroutines to access the resource.
 
-**7.4 WaitGroup**
+**8.4 WaitGroup**
 
 The `sync.WaitGroup` is used to wait for a collection of goroutines to complete their execution.
 
@@ -355,7 +355,7 @@ The `sync.WaitGroup` is used to wait for a collection of goroutines to complete 
     *   `defer wg.Done()` signals that a goroutine has finished its work.
     *   `wg.Wait()` blocks until all goroutines have finished.
 
-**7.5 Key Takeaways**
+**8.5 Key Takeaways**
 
 This chapter has covered the core concepts of concurrency in Go:
 

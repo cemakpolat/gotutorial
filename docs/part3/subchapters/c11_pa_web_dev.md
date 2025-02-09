@@ -4,11 +4,11 @@ parent: Real-World Applications
 nav_order: 2
 ---
 
-## Chapter 10: Practical Application: Web Development
+## Chapter 11: Practical Application: Web Development
 
 Go's strong support for concurrency and its efficient standard library make it a great choice for web development. This chapter will guide you through building web applications and clients, using Go's web capabilities.
 
-**10.1 Example: A Basic Web Server with Routing**
+**11.1 Example: A Basic Web Server with Routing**
 
 This example will demonstrate how to create a basic web server that handles different routes and responses.
 
@@ -93,7 +93,7 @@ This example will demonstrate how to create a basic web server that handles diff
 
     3.  Open a web browser and visit `http://localhost:8080`, `http://localhost:8080/about`, `http://localhost:8080/posts`, and `http://localhost:8080/posts?param1=value1&param2=value2`. Also use tools like `curl` or `Postman` to send a POST request to `http://localhost:8080/posts` using a body in the json format `{"message": "This is a new message", "author": "John"}`.
 
-**10.2 Example: A REST API Client**
+**11.2 Example: A REST API Client**
 
 This example will demonstrate how to create a command-line tool that interacts with a REST API, retrieves data and prints to the console.
 
@@ -184,7 +184,7 @@ This example will demonstrate how to create a command-line tool that interacts w
 		go run . https://jsonplaceholder.typicode.com/todos/1
 		```
 
-**10.3 Example: A Simple Chat Server (TCP)**
+**11.3 Example: A Simple Chat Server (TCP)**
 
 This example will demonstrate how to create a simple TCP server that allows clients to connect and send messages to each other.
 
@@ -303,7 +303,7 @@ This example will demonstrate how to create a simple TCP server that allows clie
 
     3.  Use multiple `netcat` clients or a similar tool to connect to `localhost:8080`, send messages and see them broadcasted in the other clients.
 
-**10.4 Key Takeaways**
+**11.4 Key Takeaways**
 
 This chapter has provided practical examples of web development using Go:
 

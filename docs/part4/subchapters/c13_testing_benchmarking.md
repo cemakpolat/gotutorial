@@ -4,11 +4,11 @@ parent: Advanced Topics
 nav_order: 1
 ---
 
-## Chapter 12: Testing and Benchmarking
+## Chapter 13: Testing and Benchmarking
 
 Writing tests and measuring performance are essential parts of building robust and efficient software. Go provides built-in support for both, making it easier to ensure the quality and performance of your code. This chapter will guide you through the process of writing unit tests and performing benchmarks using Go.
 
-**12.1 Writing Unit Tests with Go's `testing` Package**
+**13.1 Writing Unit Tests with Go's `testing` Package**
 
 Go's `testing` package provides a simple and powerful way to write unit tests. Tests are functions that verify the behavior of your code and must follow certain conventions.
 
@@ -115,7 +115,7 @@ Go's `testing` package provides a simple and powerful way to write unit tests. T
 	```
 	In the above example, if the environment variable `ENABLE_SKIP_TEST` is not set to `"true"` the `Test with negative numbers` subtest will be skipped.
 
-**12.2 Using Benchmarking to Measure Performance**
+**13.2 Using Benchmarking to Measure Performance**
 
 Go's `testing` package also supports benchmarking to measure the performance of functions or code blocks. Benchmarks help you identify performance bottlenecks and compare different approaches.
 
@@ -167,7 +167,7 @@ Go's `testing` package also supports benchmarking to measure the performance of 
 	go test -bench=. -benchmem ./...
 	```
 
-**12.3 Key Takeaways**
+**13.3 Key Takeaways**
 
 This chapter has explored how to write effective tests and benchmarks in Go:
 

@@ -5,11 +5,11 @@ nav_order: 1
 ---
 
 
-## Chapter 9: Practical Application: Building CLI Tools
+## Chapter 10: Practical Application: Building CLI Tools
 
 Command-line tools are essential for automating tasks and interacting with systems. Go's efficiency and simplicity make it a great language for creating powerful CLI applications. In this chapter, we'll develop three practical examples that demonstrate how to use Go to build useful CLI tools.
 
-**9.1 Example: A Simple To-Do List Manager**
+**10.1 Example: A Simple To-Do List Manager**
 
 This example will demonstrate how to create a basic to-do list manager, allowing users to add, list, and mark tasks as complete.
 
@@ -180,7 +180,7 @@ This example will demonstrate how to create a basic to-do list manager, allowing
 
     3.  Follow the prompts to manage tasks.
 
-**9.2 Example: A Word Frequency Counter**
+**10.2 Example: A Word Frequency Counter**
 
 This example will demonstrate how to create a CLI tool that counts the frequency of each word in a text file.
 
@@ -284,7 +284,7 @@ This example will demonstrate how to create a CLI tool that counts the frequency
 
         Replace `mytext.txt` with the name of your input file, and 5 with the desired `topN` value.
 
-**9.3 Example: A Command-Line File Downloader**
+**10.3 Example: A Command-Line File Downloader**
 
 This example will demonstrate how to create a CLI tool that downloads a file from a given URL.
 
@@ -359,7 +359,7 @@ This example will demonstrate how to create a CLI tool that downloads a file fro
 
         Replace `<URL>` with the URL of the file you want to download and `<filePath>` with the path where you want to save the downloaded file, including the file name.
 
-**9.4 Key Takeaways**
+**10.4 Key Takeaways**
 
 This chapter has demonstrated the practical application of Go for building useful CLI tools:
 

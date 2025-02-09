@@ -1,14 +1,14 @@
 ---
 title: Working with Packages and Modules
 parent: Advanced Go Development
-nav_order: 2
+nav_order: 4
 ---
 
-## Chapter 5: Working with Packages and Modules
+## Chapter 6: Working with Packages and Modules
 
 As your Go projects grow in size and complexity, it becomes essential to organize your code into reusable units. Go achieves this through the use of packages and modules. This chapter will guide you on creating packages, managing dependencies, and following best practices for organized and maintainable code.
 
-**5.1 Creating and Organizing Packages**
+**6.1 Creating and Organizing Packages**
 
 In Go, a package is a collection of source files located in the same directory. A package's purpose is to group related functionalities. Packages are the fundamental building blocks of Go programs, promoting modularity and code reuse.
 
@@ -42,7 +42,7 @@ In Go, a package is a collection of source files located in the same directory. 
     *   Identifiers (variables, functions, types) that start with an uppercase letter are exported from the package. This means that they can be accessed from outside the package.
     *   Identifiers that start with a lowercase letter are not exported and can only be used within the package. This provides encapsulation and prevents access from other packages.
 
-**5.2 Importing and Using Packages**
+**6.2 Importing and Using Packages**
 
 To use the functions, types, and variables defined in a package, you must import it.
 
@@ -75,7 +75,7 @@ To use the functions, types, and variables defined in a package, you must import
 *   **Using Package Elements:**
     You can access exported elements of a package using the dot notation (`package.Element`).
 
-**5.3 Managing Dependencies with Go Modules**
+**6.3 Managing Dependencies with Go Modules**
 
 Go Modules are the official dependency management system in Go, which replaces the old approach of relying on the `GOPATH`. Modules allow you to track the dependencies of your projects and ensure consistent builds.
 
@@ -123,7 +123,7 @@ Go Modules are the official dependency management system in Go, which replaces t
     ```
     In this example, the project will always use `github.com/gin-gonic/gin` version `v1.9.1`.
 
-**5.4 Best Practices for Package Design**
+**6.4 Best Practices for Package Design**
 
 Good package design is essential for creating scalable, maintainable, and reusable code.
 
@@ -141,7 +141,7 @@ Good package design is essential for creating scalable, maintainable, and reusab
 
 *   **Documentation:** Use comments and godocs to document each function, type, and package. This ensures that others and even yourself can easily understand the code in the future.
 
-**5.5 Key Takeaways**
+**6.5 Key Takeaways**
 
 This chapter has covered essential concepts for managing Go code through packages and modules:
 

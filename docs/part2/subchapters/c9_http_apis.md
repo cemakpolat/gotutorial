@@ -1,14 +1,14 @@
 ---
 title: Working with HTTP and APIs
 parent: Advanced Go Development
-nav_order: 2
+nav_order: 7
 ---
 
-## Chapter 8: Working with HTTP and APIs
+## Chapter 9: Working with HTTP and APIs
 
 Go's standard library provides excellent support for building HTTP servers and clients. This chapter will introduce you to the fundamental concepts of web development with Go, allowing you to build web applications and interact with external APIs.
 
-**8.1 Creating Simple HTTP Servers**
+**9.1 Creating Simple HTTP Servers**
 
 Go makes it easy to create HTTP servers using the `net/http` package.
 
@@ -60,7 +60,7 @@ Go makes it easy to create HTTP servers using the `net/http` package.
     ```
 	*   We can define new handler functions for different paths, and define what we want the server to respond.
 
-**8.2 Handling Requests and Responses**
+**9.2 Handling Requests and Responses**
 
 Understanding how to work with requests and responses is crucial for building interactive web applications.
 
@@ -116,7 +116,7 @@ Understanding how to work with requests and responses is crucial for building in
 	*   `w.Header().Set` sets the header of the response.
     *   `w.WriteHeader` sets the status code.
 
-**8.3 Making HTTP Requests to APIs**
+**9.3 Making HTTP Requests to APIs**
 
 Go provides `net/http` for making requests to external APIs.
 
@@ -210,7 +210,7 @@ Go provides `net/http` for making requests to external APIs.
 	*   The response data can be read from the response body.
 	* The response status code must be checked.
 
-**8.4 Parsing JSON and XML Data**
+**9.4 Parsing JSON and XML Data**
 
 Go provides packages for parsing JSON and XML data.
 
@@ -319,7 +319,7 @@ Go provides packages for parsing JSON and XML data.
     ```
     *  `xml.Unmarshal` parses XML data into a struct based on the xml tags.
 
-**8.5 Key Takeaways**
+**9.5 Key Takeaways**
 
 This chapter has covered the fundamentals of working with HTTP and APIs in Go:
 

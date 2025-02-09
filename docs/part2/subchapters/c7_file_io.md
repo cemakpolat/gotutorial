@@ -1,14 +1,14 @@
 ---
 title: File Handling and Input/Output
 parent: Advanced Go Development
-nav_order: 2
+nav_order: 5
 ---
 
-## Chapter 6: File Handling and Input/Output
+## Chapter 7: File Handling and Input/Output
 
 Efficient input and output operations are essential for any software application. Go provides robust packages for interacting with files, handling various data formats, and managing standard I/O streams. This chapter will guide you through the most common I/O tasks.
 
-**6.1 Reading From and Writing To Files**
+**7.1 Reading From and Writing To Files**
 
 Go provides several ways to interact with files.
 
@@ -127,7 +127,7 @@ Go provides several ways to interact with files.
     *   `file.WriteString` writes a string to a file, and returns an error if any happened.
     *   `file.Write` writes a byte array to a file.
 
-**6.2 Using `bufio` for Efficient I/O**
+**7.2 Using `bufio` for Efficient I/O**
 
 The `bufio` package provides buffered I/O operations, which can significantly improve performance when reading or writing large amounts of data.
 
@@ -210,7 +210,7 @@ The `bufio` package provides buffered I/O operations, which can significantly im
     *   `writer.WriteString()` writes to buffer instead of directly to the file.
     *   `writer.Flush()` is used to flush any buffered data to the file.
 
-**6.3 Working with Different Formats (CSV, JSON, etc.)**
+**7.3 Working with Different Formats (CSV, JSON, etc.)**
 
 Go provides standard libraries for handling common data formats.
 
@@ -334,7 +334,7 @@ Go provides standard libraries for handling common data formats.
     *   `json.Marshal` converts a struct into a json.
 	* `json.MarshalIndent` marshalls a struct with indents to improve readability.
 
-**6.4 Working with Standard Input/Output**
+**7.4 Working with Standard Input/Output**
 
 Go provides access to standard input, output, and error streams.
 
@@ -377,7 +377,7 @@ Go provides access to standard input, output, and error streams.
     }
     ```
 
-**6.5 Key Takeaways**
+**7.5 Key Takeaways**
 
 This chapter has explored file handling and input/output operations in Go:
 
