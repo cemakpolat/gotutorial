@@ -128,13 +128,24 @@ Interfaces can embed other interfaces, creating a new interface with the combine
         return "I'm listening..."
     }
 
+    func communicate(c Communicator) {
+        fmt.Println("Speaking:", c.Speak())
+        fmt.Println("Listening:", c.Listen())
+    }
+
     func main() {
         person := Person{Name: "Alice"}
-        fmt.Println(person.Speak()) // Output: Hello!
-        fmt.Println(person.Listen())// Output: I'm listening...
-    }
+        communicate(person) // Pass person to the communicate function
+
+        // Output:
+        // Speaking: Hello!
+        // Listening: I'm listening...
+    }   
     ```
     *   The `Communicator` interface embeds both the `Speaker` and `Listener` interfaces, creating a single interface with methods from both interfaces.
+    *   **communicate** Function: The key addition is the communicate function, which takes a `Communicator` interface as a parameter. It then calls both the `Speak` and `Listen` methods on that interface.
+    *   Using the Interface: In the `main` function, we now pass the person variable (of type Person) to the communicate function. Because Person implements both Speaker and Listener, it automatically satisfies the Communicator interface.
+
 
 **3.4 Empty Interface**
 
