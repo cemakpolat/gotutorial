@@ -3,9 +3,42 @@ title: Go's Core Concepts
 parent: Foundation of Go
 nav_order: 2
 ---
+
 ## Chapter 1: Go's Core Concepts
 
-This chapter introduces the fundamental building blocks of Go programming language. Mastering these concepts is essential for writing efficient Go programs. We will explore variables, data types, operators, control flow, functions, and pointers. Even though understanding these concepts is easy, it is crucial to master these basics.
+This chapter introduces the fundamental building blocks of the Go programming language. Mastering these concepts is essential for writing efficient Go programs. We will explore variables, data types, operators, control flow, functions, and pointers. Even though understanding these concepts is easy, it is crucial to master these basics. We will also list all the usable keywords in the go programming language.
+
+**1.0 Go Keywords**
+
+The following table summarizes the core keywords in Go. These keywords have special meanings and cannot be used as identifiers (variable names, function names, etc.):
+
+| Keyword     | Description                                                              | Usage Example                                                                               |
+| :---------- | :----------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| `break`     | Terminates the nearest enclosing loop (for, switch, or select) statement.  | `for i := 0; i < 10; i++ { if i > 5 { break } }`                                           |
+| `case`      | Used in switch statements to define a case.                              | `switch grade { case "A": ... }`                                                            |
+| `chan`      | Specifies that a variable is a channel.                                 | `c := make(chan int)`                                                                        |
+| `const`     | Declares a constant value.                                             | `const pi = 3.14`                                                                           |
+| `continue`  | Skips the rest of the current loop iteration.                          | `for i := 0; i < 10; i++ { if i%2 == 0 { continue } }`                                      |
+| `default`   | Used in a switch statement to define a default case.                   | `switch grade { default: ... }`                                                              |
+| `defer`     | Schedules a function call to be run after the surrounding function returns. | `defer file.Close()`                                                                          |
+| `else`      | Used in if statements to specify code to execute if the condition is false. | `if x > 0 { ... } else { ... }`                                                             |
+| `fallthrough`| Forces execution to continue to the next case in a switch statement.      | `switch i { case 1: ...; fallthrough; case 2: ... }`                                         |
+| `for`       | Specifies a loop.                                                      | `for i := 0; i < 10; i++ { ... }`                                                           |
+| `func`      | Defines a function.                                                     | `func add(x, y int) int { ... }`                                                            |
+| `go`        | Starts a new goroutine.                                                | `go myFunction()`                                                                           |
+| `goto`      | Transfers control to a labeled statement.                                 | `goto myLabel` (Use sparingly!)                                                                |
+| `if`        | Specifies a conditional statement.                                       | `if x > 0 { ... }`                                                                           |
+| `import`    | Imports packages.                                                        | `import "fmt"`                                                                              |
+| `interface` | Defines an interface type.                                             | `type MyInterface interface { ... }`                                                         |
+| `map`       | Specifies that a variable is a map.                                     | `myMap := make(map[string]int)`                                                               |
+| `package`   | Declares the package name.                                               | `package main`                                                                                |
+| `range`     | Iterates over elements in arrays, slices, strings, maps, and channels.   | `for index, value := range myArray { ... }`                                                   |
+| `return`    | Exits a function and optionally specifies a return value.               | `return x + y`                                                                                |
+| `select`    | Used in a select statement to choose from multiple channel operations.     | `select { case <-chan1: ...; case <-chan2: ... }`                                             |
+| `struct`    | Defines a struct type.                                                  | `type Person struct { ... }`                                                                   |
+| `switch`    | Specifies a multi-way branch based on the value of an expression.      | `switch value { case 1: ...; default: ... }`                                                 |
+| `type`      | Declares a new type (alias or struct).                                   | `type MyInt int`                                                                              |
+| `var`       | Declares a variable.                                                     | `var x int`                                                                                   |
 
 **1.1 Variables and Data Types**
 
@@ -287,6 +320,8 @@ Pointers are useful in situations like:
 
 This section summarizes the key concepts and practical skills covered in this chapter:
 
+* **Go Keywords:**
+    *   Go has several keywords, all with different purposes, such as control flow, variables declaration, functions, etc.
 *   **Variables and Data Types:**
     *   Go supports basic data types such as `int`, `float`, `bool`, and `string`.
     *   Variables can be declared with explicit types or through type inference using `:=`.
